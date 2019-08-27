@@ -48,7 +48,7 @@ public class Main {
         String girlFullName = girlFirstNames[n2] + " " + lastNames[n3];
 
         //Asking user for input
-        System.out.println("Type 1 for boy name 2 for girl name (combination of both if none selected):");
+        System.out.println("Type 1 for boy name 2 for girl name (both if none selected):");
 
         //Obtaining user input
         boyOrGirlSelect = reader.nextInt();
