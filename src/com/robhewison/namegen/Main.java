@@ -29,51 +29,61 @@ public class Main {
         int lastNameLength = lastNames.length;
         //User selected number if they want boy or girl
         int boyOrGirlSelect;
+        //variable for how many names get generated
+        int nameCount;
         //Initialize Scanner to get user input
         Scanner reader = new Scanner(System.in);
 
         // Random Number Generator Setup
         Random rand = new Random();
-        int n = rand.nextInt(boyNameLength);
-        int n2 = rand.nextInt(girlNameLength);
-        int n3 = rand.nextInt(lastNameLength);
-        // Random generation if they don't choose boy or girl
-        int oneOrTwo = rand.nextInt(2);
-        oneOrTwo += 1;
         // Add 1 to the result to get a number from the required range
         // (i.e., [1 - 100])
 
-        //Randomized first and last name variables
-        String boyFullName = boyFirstNames[n] + " " + lastNames[n3];
-        String girlFullName = girlFirstNames[n2] + " " + lastNames[n3];
-
-        //Asking user for input
+        //Asking user whether they want a boy or girl
         System.out.println("Type 1 for boy name 2 for girl name (both if none selected):");
 
-        //Obtaining user input
+        //Obtaining user input for boy/girl
         boyOrGirlSelect = reader.nextInt();
+
+        //Asking how many names you'd like to generate
+        System.out.println("How many names would you like to generate?");
+
+        //Obtaining user input for how many names to generate
+        nameCount = reader.nextInt();
         reader.close();
 
+        //Creating ability to generate multiple names
+        for (int i = 0; i < nameCount; i++) {
+            int n = rand.nextInt(boyNameLength);
+            int n2 = rand.nextInt(girlNameLength);
+            int n3 = rand.nextInt(lastNameLength);
 
-        //Decision tree
-        if (boyOrGirlSelect == 1) {
-            System.out.println(boyFullName);
-        }
-        else if (boyOrGirlSelect == 2) {
-            System.out.println(girlFullName);
-        }
-        else {
-            if (oneOrTwo == 1) {
+            // Random generation if they don't choose boy or girl
+            int oneOrTwo = rand.nextInt(2);
+            oneOrTwo += 1;
+
+            String boyFullName = boyFirstNames[n] + " " + lastNames[n3];
+            String girlFullName = girlFirstNames[n2] + " " + lastNames[n3];
+
+            //Decision tree
+            if (boyOrGirlSelect == 1) {
                 System.out.println(boyFullName);
             }
-            else if (oneOrTwo == 2) {
+            else if (boyOrGirlSelect == 2) {
                 System.out.println(girlFullName);
             }
             else {
-                System.out.println("error");
+                if (oneOrTwo == 1) {
+                    System.out.println(boyFullName);
+                }
+                else if (oneOrTwo == 2) {
+                    System.out.println(girlFullName);
+                }
+                else {
+                    System.out.println("error");
+                }
             }
         }
-
 
         // Check if there are any duplicates in the boyFirstNames Array
         for (int i = 0; i < boyNameLength; i++) {
