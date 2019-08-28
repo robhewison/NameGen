@@ -10,12 +10,15 @@ public class Main {
         String[] boyFirstNames = new String[]{"Rob", "Andrew", "James", "John", "Michael", "William", "David", "Richard", "Joseph", "Thomas", "Charles", "Christopher", "Daniel", "Matthew", "Anthony", "Donald", "Mark", "Paul", "Steven", "Kenneth",
                 "Joshua", "George", "Kevin", "Brian", "Edward", "Ronald", "Timothy", "Jason", "Jeffrey", "Ryan", "Jacob", "Gary", "Nicholas", "Eric", "Stephen", "Jonathan", "Larry", "Justin", "Scott", "Brandon", "Frank",
                 "Benjamin", "Gregory", "Samuel", "Raymond", "Patrick", "Alexander", "Jack", "Dennis", "Jerry", "Tyler", "Aaron", "Jose", "Henry", "Douglas", "Adam", "Peter", "Nathan", "Zachary", "Walter", "Kyle", "Harold",
-                "Carl", "Jeremy", "Keith", "Roger", "Gerald", "Ethan", "Arthur", "Terry", "Travis", "Huey", "Briggs", "Bruno"};
+                "Carl", "Jeremy", "Keith", "Roger", "Gerald", "Ethan", "Arthur", "Terry", "Travis", "Huey", "Briggs", "Bruno", "Hector", "Mario", "Atticus", "Cruz", "Garrett", "Cesar", "Zayn", "Odin", "Muhammad", "Conor", "Joaquin",
+                "Caiden", "Dakota", "Major", "Keegan", "Sergio", "Marshall", "Johnny", "Kade", "Edgar", "Marco", "Tyson", "Nasir", "Kanye", "Adonis", "Rory", "Andy", "Malik", "Ari", "Gage", "Trevor", "Pedro", "Winston", "Matthias"};
 
         //Created the Array for Girl First Names
         String[] girlFirstNames = new String[]{"Tennison", "Emma", "Olivia", "Ava", "Isabella", "Sophia", "Charlotte", "Mia", "Amelia", "Harper", "Evelyn", "Abigail", "Emily", "Elizabeth", "Mila", "Ella", "Avery", "Sofia", "Camila", "Aria", "Scarlett",
                 "Victoria", "Madison", "Luna", "Grace", "Chloe", "Penelope", "Layla", "Riley", "Zoey", "Nora", "Lily", "Eleanor", "Hannah", "Lillian", "Addison", "Aubrey", "Ellie", "Stella", "Natalie", "Zoe", "Leah", "Hazel",
-                "Violet", "Aurora", "Savannah", "Audrey", "Brooklyn", "Bella", "Claire", "Skylar", "Lucy", "Paisley", "Everly", "Anna", "Caroline", "Nova", "Genesis", "Emilia", "Kennedy", "Samantha", "Maya", "Willow", "Kinsley"};
+                "Violet", "Aurora", "Savannah", "Audrey", "Brooklyn", "Bella", "Claire", "Skylar", "Lucy", "Paisley", "Everly", "Anna", "Caroline", "Nova", "Genesis", "Emilia", "Kennedy", "Samantha", "Maya", "Willow", "Kinsley", "Tessa", "Dakota",
+                "Selena", "Lia", "Camille", "Malia", "Samara", "Raegan", "Ruth", "Olive", "Alexa", "Ivy", "Isla", "Autumn", "Eva", "Alice", "Ariana", "Jessica", "Logan", "Annie", "Sage", "Nina", "Arielle", "Raelyn", "Rylie", "Lexi", "Maci", "Margot",
+                "Joy", "Cassidy", "Veronica", "Angel", "Heaven", "Kira", "Haley", "Alison", "Helen", "Kelsey", "Mikayla", "Blair", "Kyla", "Eve", "Kayleigh", "Sierra", "Chelsea", "Kara", "Holly", "Leslie", "Remy", "Macy", "Sasha", "Liberty"};
 
         //Created the Array for Last Names
         String[] lastNames = new String[]{"Hewison", "Smith", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor", "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin", "Thompson", "Garcia", "Martinez", "Robinson", "Clark",
@@ -85,13 +88,13 @@ public class Main {
             }
         }
 
-        // Check if there are any duplicates in the boyFirstNames Array
-        for (int i = 0; i < boyNameLength; i++) {
-            for (int j = i + 1; j < boyNameLength; j++) {
-                if (boyFirstNames[i].equals(boyFirstNames[j])) {
-                    System.out.println(boyFirstNames[i]);
+        // Check if there are any duplicates in the girlFirstNames Array
+        for (int i = 0; i < girlNameLength; i++) {
+            for (int j = i + 1; j < girlNameLength; j++) {
+                if (girlFirstNames[i].equals(girlFirstNames[j])) {
+                    System.out.println(girlFirstNames[i]);
                     System.out.println(i);
-                    System.out.println(boyFirstNames[j]);
+                    System.out.println(girlFirstNames[j]);
                     System.out.println(j);
                 }
             }
